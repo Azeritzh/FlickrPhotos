@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Flickr Photo Viewer</string>
+    <string name="app_header_my_photos">My Photos</string>
+    <string name="app_header_public_photos">Public Photos</string>
+    <string name="app_header_map">Photo Map</string>
+    <string name="app_header_profile">My Profile</string>
+    <string name="title_activity_menu">Menu</string>
 </resources>
