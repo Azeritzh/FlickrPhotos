@@ -30,6 +30,8 @@ public class MenuActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_map:
                     mTextMessage.setText(R.string.app_header_map);
+                    Intent mapIntent = new Intent(getApplicationContext(), MapsActivity.class);
+                    startActivity(mapIntent);
                     return true;
                 case R.id.navigation_profile:
                     mTextMessage.setText(R.string.app_header_profile);
