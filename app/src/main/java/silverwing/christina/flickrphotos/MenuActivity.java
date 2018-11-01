@@ -35,6 +35,8 @@ public class MenuActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_profile:
                     mTextMessage.setText(R.string.app_header_profile);
+                    Intent profileIntent = new Intent(getApplicationContext(), ProfileActivity.class);
+                    startActivity(profileIntent);
                     return true;
             }
             return false;
