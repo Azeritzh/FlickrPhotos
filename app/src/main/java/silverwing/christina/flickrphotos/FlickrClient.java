@@ -17,7 +17,7 @@ public class FlickrClient extends OAuthBaseClient{
     public static final String REST_URL = "https://www.flickr.com/services";
     public static final String REST_CONSUMER_KEY = "a41792f4c87d9dca4e3f4d896bbf854e";
     public static final String REST_CONSUMER_SECRET = "b59e218f94fd58f6";
-    public static final String REST_CALLBACK_URL = "oauth://cprest";
+    public static final String REST_CALLBACK_URL = "oauth://flickrphotos";
 
     // Landing page to indicate the OAuth flow worked in case Chrome for Android 25+ blocks navigation back to the app.
     public static final String FALLBACK_URL = "https://codepath.github.io/android-rest-client-template/success.html";
@@ -26,8 +26,8 @@ public class FlickrClient extends OAuthBaseClient{
     public static final String REST_CALLBACK_URL_TEMPLATE = "intent://%s#Intent;action=android.intent.action.VIEW;scheme=%s;package=%s;S.browser_fallback_url=%s;end";
 
     public FlickrClient(Context context) throws InterruptedException, ExecutionException, IOException {
-        super(context, REST_API_INSTANCE, REST_URL, REST_CONSUMER_KEY, REST_CONSUMER_SECRET,
-                String.format(REST_CALLBACK_URL_TEMPLATE, "cprest", "oauth", context.getPackageName(), FALLBACK_URL));
+        super(context, REST_API_INSTANCE, REST_URL, REST_CONSUMER_KEY, REST_CONSUMER_SECRET, REST_CALLBACK_URL);
+                //String.format(REST_CALLBACK_URL_TEMPLATE, "cprest", "oauth", context.getPackageName(), FALLBACK_URL));
         setBaseUrl("https://api.flickr.com/services/rest");
     }
 
@@ -38,3 +38,4 @@ public class FlickrClient extends OAuthBaseClient{
         client.get(apiUrl, params, handler);
     }
 }
+

@@ -31,7 +31,7 @@
 
                 <data
                     android:scheme="oauth"
-                    android:host="arbitraryname.com"
+                    android:host="flickrphotos"
                     />
             </intent-filter>
         </activity>
