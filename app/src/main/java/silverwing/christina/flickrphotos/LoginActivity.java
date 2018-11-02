@@ -1,6 +1,9 @@
 package silverwing.christina.flickrphotos;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 
 import com.codepath.oauth.OAuthLoginActivity;
 
@@ -22,12 +25,23 @@ public class LoginActivity extends OAuthLoginActivity<FlickrClient> {
     }
 
     @Override
-    public void onLoginSuccess() {
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.navigation, menu);
+        return true;
+    }
 
+    @Override
+    public void onLoginSuccess() {
+        Intent loginIntent = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivity(loginIntent);
     }
 
     @Override
     public void onLoginFailure(Exception e) {
+        e.printStackTrace();
+    }
 
+    public void loginToRest(View view) {
+        getClient().connect();
     }
 }
