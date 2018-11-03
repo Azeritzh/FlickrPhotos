@@ -15,6 +15,8 @@ public class MyPhotosActivity extends AppCompatActivity {
     private ArrayList<String> image_headers = new ArrayList<>();
     private ArrayList<String> image_URLs = new ArrayList<>();
 
+    private ArrayList<String> public_images_list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,10 @@ public class MyPhotosActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: started.");
 
         initPrivateImages();
+    }
+
+    private void constructImageUrl() {
+
     }
 
     private void initPrivateImages() {
