@@ -22,7 +22,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.VIEW" />
 
@@ -30,9 +30,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="oauth"
                     android:host="flickrphotos"
-                    />
+                    android:scheme="oauth" />
             </intent-filter>
         </activity>
         <activity
@@ -59,7 +58,8 @@
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".ProfileActivity"
-            android:label="My Profile"/>
+            android:label="My Profile" />
+        <activity android:name=".PhotoActivity"></activity>
     </application>
 
 </manifest>

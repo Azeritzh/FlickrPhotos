@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
     tools:context=".LoginActivity">
 
     <TextView
@@ -28,23 +29,27 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="148dp"
+        android:background="@drawable/ic_rounded_corners"
         android:onClick="loginToRest"
-        android:text="Log In"
+        android:text="Log In with Flickr"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0"/>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="273dp"
-        android:layout_height="wrap_content"
+        android:layout_width="229dp"
+        android:layout_height="61dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
-        android:text="Log in with your Flickr account to use this app"
+        android:text="Welcome to the Flickr Photo Viewer"
         android:textAlignment="center"
+        android:textColor="#4682b6"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

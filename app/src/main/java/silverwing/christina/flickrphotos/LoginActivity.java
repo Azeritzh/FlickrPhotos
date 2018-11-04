@@ -1,10 +1,12 @@
 package silverwing.christina.flickrphotos;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.util.Log;
+import android.widget.GridView;
 
 import com.codepath.oauth.OAuthLoginActivity;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -22,7 +24,6 @@ public class LoginActivity extends OAuthLoginActivity<FlickrClient> {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
     }
 
     @Override

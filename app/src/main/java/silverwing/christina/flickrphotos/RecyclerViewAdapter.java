@@ -63,10 +63,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
         ImageView image_view;
         TextView image_header;
         ConstraintLayout parent_image_view;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image_view = itemView.findViewById(R.id.image_view);
