@@ -4,21 +4,20 @@
 
     <item
         android:id="@+id/navigation_my_photos"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_app_images_icon"
         android:title="@string/app_header_my_photos" />
 
     <item
         android:id="@+id/navigation_public_photos"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_app_public_icon"
         android:title="@string/app_header_public_photos" />
 
     <item
         android:id="@+id/navigation_map"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_app_map_icon"
         android:title="@string/app_header_map" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_app_profile_icon"
         android:title="@string/app_header_profile" />
-
 </menu>

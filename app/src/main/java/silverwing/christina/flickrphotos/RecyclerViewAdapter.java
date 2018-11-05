@@ -1,5 +1,6 @@
 package silverwing.christina.flickrphotos;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -19,8 +20,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> view_image_headers = new ArrayList<>();
-    private ArrayList<String> view_images = new ArrayList<>();
+    private ArrayList<String> view_image_headers;
+    private ArrayList<String> view_images;
     private Context view_context;
 
     public RecyclerViewAdapter(ArrayList<String> view_image_headers, ArrayList<String> view_images, Context view_context) {
@@ -39,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         Log.d(TAG, "onBindViewHolder: called.");
 
         Glide.with(view_context)
@@ -76,7 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         public void onClick(View view) {
-            
+
         }
     }
 }

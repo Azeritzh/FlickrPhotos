@@ -3,7 +3,6 @@ package silverwing.christina.flickrphotos;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,8 +19,6 @@ public class MyPhotosActivity extends Fragment {
 
     private ArrayList<String> image_headers = new ArrayList<>();
     private ArrayList<String> image_URLs = new ArrayList<>();
-
-    private ArrayList<String> public_images_list;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +40,7 @@ public class MyPhotosActivity extends Fragment {
         return view;
     }
 
-    private void constructImageUrl() {
+    private void constructFlickrImageUrl() {
 
     }
 
@@ -58,6 +55,10 @@ public class MyPhotosActivity extends Fragment {
     }
 
     private void initPublicImages() {
+        image_URLs.add("https://images.unsplash.com/photo-1509070016581-915335454d19?ixlib=rb-0.3.5&s=71368a9a8aa7e254cee84a4afe6ad150&w=1000&q=80");
+        image_headers.add("Autumn leaf");
 
+        image_URLs.add("https://www.motherjones.com/wp-content/uploads/2018/06/blog_lunchtime_red_daisy_rain.jpg");
+        image_headers.add("Red flowers");
     }
 }

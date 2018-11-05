@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_app_icon_round" />
-                            <entry key="sourceFile" value="C:\Users\Guardian\Desktop\app_icon_round.svg" />
+                            <entry key="outputName" value="ic_app_public_icon" />
+                            <entry key="sourceFile" value="C:\Users\Guardian\Desktop\app_public_icon.svg" />
                           </map>
                         </option>
                       </PersistentState>
