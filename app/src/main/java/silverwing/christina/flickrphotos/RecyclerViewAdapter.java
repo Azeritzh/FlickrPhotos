@@ -62,7 +62,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return view_image_headers.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView image_view;
         TextView image_header;
         ConstraintLayout parent_image_view;
@@ -72,7 +72,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             image_view = itemView.findViewById(R.id.image_view);
             image_header = itemView.findViewById(R.id.image_header);
             parent_image_view = itemView.findViewById(R.id.parent_image_view);
+            itemView.setOnClickListener(this);
+        }
 
+        public void onClick(View view) {
+            
         }
     }
 }

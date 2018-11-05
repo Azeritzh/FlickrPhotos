@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -29,6 +32,11 @@ public class MenuActivity extends AppCompatActivity {
 
         buildFragmentsList();
         switchFragment(0,MY_PHOTOS_FRAGMENT);
+        MyPhotosActivity fragment = new MyPhotosActivity();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.frame_fragmentholder, fragment);
+        fragmentTransaction.commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -39,6 +47,12 @@ public class MenuActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_my_photos:
                     switchFragment(0,MY_PHOTOS_FRAGMENT);
+
+                    MyPhotosActivity fragment = new MyPhotosActivity();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.add(R.id.frame_fragmentholder, fragment);
+                    fragmentTransaction.commit();
                     return true;
                 case R.id.navigation_public_photos:
                     switchFragment(1,PUBLIC_PHOTOS_FRAGMENT);

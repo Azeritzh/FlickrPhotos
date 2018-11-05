@@ -14,13 +14,29 @@ public class MenuBarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.menu_navigation_view, container, false);
+        if(getArguments().getString(ARG_TITLE, "") == "MyPhotos") {
+            View rootView = inflater.inflate(R.layout.activity_my_photos, container, false);
+            return rootView;
+        }
+        else if(getArguments().getString(ARG_TITLE, "") == "PublicPhotos"){
+            View rootView = inflater.inflate(R.layout.activity_my_photos, container, false);
+            return rootView;
+        }
+        else if(getArguments().getString(ARG_TITLE, "") == "Map"){
+            View rootView = inflater.inflate(R.layout.activity_maps, container, false);
+            return rootView;
+        }
+        else if(getArguments().getString(ARG_TITLE, "") == "Profile") {
+            View rootView = inflater.inflate(R.layout.activity_profile, container, false);
+            return rootView;
+        }
 
-        textView = (TextView) rootView.findViewById(R.id.main_test);
+        //textView = (TextView) rootView.findViewById(R.id.main_test);
 
-        String title = getArguments().getString(ARG_TITLE, "");
-        textView.setText(title);
+        //String title = getArguments().getString(ARG_TITLE, "");
+        //textView.setText(title);
 
-        return rootView;
+        //return rootView;
+        return null;
     }
 }
